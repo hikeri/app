@@ -683,7 +683,7 @@ export class LegacyApiService
         throw Error('Cannot download offline repo without url and offlineKEy')
       }
 
-      const TRUSTED_FEATURE_HOSTS = ['api.standardnotes.com', 'localhost']
+      const TRUSTED_FEATURE_HOSTS = ['api.standardnotes.com', 'api.standardnotes.hikeri.dedyn.io', 'localhost']
 
       const { hostname } = new URL(featuresUrl)
 
