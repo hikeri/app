@@ -281,13 +281,7 @@ export class SessionManager
   }
 
   public isSignedIntoFirstPartyServer(): boolean {
-    const isThirdPartyHostUsedOrError = this.isApplicationUsingThirdPartyHostUseCase.execute()
-    if (isThirdPartyHostUsedOrError.isFailed()) {
-      return false
-    }
-    const isThirdPartyHostUsed = isThirdPartyHostUsedOrError.getValue()
-
-    return this.isSignedIn() && !isThirdPartyHostUsed
+    return this.isSignedIn();
   }
 
   public async reauthenticateInvalidSession(
