@@ -281,7 +281,7 @@ export class SessionManager
   }
 
   public isSignedIntoFirstPartyServer(): boolean {
-    const isThirdPartyHostUsedOrError == false
+    const isThirdPartyHostUsedOrError = this.isApplicationUsingThirdPartyHostUseCase.execute()
     const isThirdPartyHostUsed == false
     
     return this.isSignedIn();
